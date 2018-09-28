@@ -2,10 +2,19 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/corgi', (req,res,next) => {
+const Dog = require('../models').Dog
+
+router.get('/corgis', (req,res,next) => {
   res.json({
     hello: "world"
   })
+  
+  // console.log(Dog)
+  // Dog.findAll()
+  // .then(dogs => {
+  //   console.log(dogs)
+  //   res.json(dogs)
+  // })
 })
 
 module.exports = router
